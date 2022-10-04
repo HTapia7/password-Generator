@@ -1,7 +1,3 @@
-// Assignment code here
-
-
-
 //  Create Vars for lowercase, uppercase, numeric values and special characters
 
 var numericValues = [0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 ,8 , 9 , 0];
@@ -12,9 +8,11 @@ var alphabetUpper = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'
 
 var alphabetLower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q", "r","s","t","u","v","w","x","y","z"];
 
-
+// Empty Array 
 var randomPassword = [];
 
+
+// fuction to get a random number 
 function randomInt(min , max ){
     if (!max) {
         max = min
@@ -31,7 +29,7 @@ function getRandomItem(list){
     return list[randomInt(list.length)]
 }
 
-
+// Main fuction of the code, asks the user for prompt 
 function generatePassword(){
 
 var userLengthInput = window.prompt('How long do you want your password to be?');
@@ -50,13 +48,15 @@ if (passwordLength < 8 || passwordLength > 128){
 // console.log(passwordLength);  <--- Testing purposes 
 
 
-// Variables for prompt messages
+// For the user to choose which option he wants
 
 userInputLowerCase = window.confirm('Would you like to include lowercase?');
 userInputUpperCase = window.confirm('Would you like to include uppercase?');
 userInputNumericValue = window.confirm('Would you like a numeric value?');
 userInputSpecialCharacters = window.confirm('Would you like special characters?');
 
+
+// this will get the users input and add it to list 
 if (userInputLowerCase === true){
     randomPassword.push(alphabetLower)
 }
@@ -80,6 +80,8 @@ if (randomPassword.length === 0 ){
 
 var generatePassword = ''
 
+
+// loop to randomize items 
 for (var i = 0; i < passwordLength; i++){
     var randomList = getRandomItem(randomPassword)
     var randomCharacter = getRandomItem(randomList)
@@ -91,7 +93,6 @@ for (var i = 0; i < passwordLength; i++){
     return generatePassword
 
 }
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
