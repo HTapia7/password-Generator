@@ -1,5 +1,5 @@
-![](https://file%2B.vscode-resource.vscode-cdn.net/Users/soliditize/Desktop/password_Generator/assets/images/Screen%20Shot%202022-10-04%20at%2012.33.47%20AM.png?version%3D1664869169070)
- 
+<img width="1512" alt="Screen Shot 2022-10-04 at 12 33 47 AM" src="https://user-images.githubusercontent.com/112591915/193770852-c5a1c2e4-4fa3-4ed8-a77b-8c16db350558.png">
+
  
  # Password Generator 
 
