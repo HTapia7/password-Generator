@@ -2,20 +2,7 @@
 
 
 
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-
-
-
-
 //  Create Vars for lowercase, uppercase, numeric values and special characters
-
 
 var numericValues = [0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 ,8 , 9 , 0];
 var specialCharacters = ['!', '#', '$' , '@', '%' , '^' , '+' , '-' , '?' , '~' , '*' ]
@@ -28,7 +15,24 @@ var alphabetLower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o"
 
 var randomPassword = [];
 
-function messagePrompt(){
+function randomInt(min , max ){
+    if (!max) {
+        max = min
+        min = 0 
+    }
+
+    var rand = Math.random()
+    return Math.floor(min * (1 - rand) + rand * max)
+
+}
+
+
+function getRandomItem(list){
+    return list[randomInt(list.length)]
+}
+
+
+function generatePassword(){
 
 var userLengthInput = window.prompt('How long do you want your password to be?');
 
@@ -69,28 +73,24 @@ if (userInputSpecialCharacters === true){
     randomPassword.push(specialCharacters)
 }
 
-console.log(randomPassword)
+if (randomPassword.length === 0 ){
+    randomPassword.push(numericValues)
 
 }
 
-messagePrompt();
+var generatePassword = ''
 
+for (var i = 0; i < passwordLength; i++){
+    var randomList = getRandomItem(randomPassword)
+    var randomCharacter = getRandomItem(randomList)
 
+    generatePassword += randomCharacter
+}
+// console.log(generatePassword)
 
+    return generatePassword
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 // Get references to the #generate element
