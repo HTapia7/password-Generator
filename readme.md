@@ -18,3 +18,10 @@
 *  When all prompts are answered then a password is generated that matches the selected criteria
     
 *  When the password is generated then the password is either displayed in an alert or written to the page
+
+
+## Technologies 
+
+* HTML
+* CSS
+* JavaScript
